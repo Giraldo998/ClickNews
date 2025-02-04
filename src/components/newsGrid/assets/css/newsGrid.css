@@ -1,0 +1,9 @@
+.news_container {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(4, 1fr);
+	gap: 8px;
+   height: 500px;
+   width: 70%;
+   margin-bottom: 60px;
+}
