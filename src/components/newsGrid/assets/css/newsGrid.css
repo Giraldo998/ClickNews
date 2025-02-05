@@ -3,6 +3,7 @@
 	height: 500px;
 	width: 70%;
 	margin-bottom: 60px;
+	border-bottom: 1px solid #ccc;
 }
 .grid_1,
 .grid_3 {
@@ -107,6 +108,9 @@
 		grid-column-start: 5;
 		grid-row-start: 1;
 		font-size: 0.8rem;
+		padding-left: 4px;
+		border-left: 1px solid #ccc;
+		border-bottom: 1px solid #ccc;
 
 		.card_content {
 			.card_header {
@@ -124,6 +128,8 @@
 		grid-column-start: 5;
 		grid-row-start: 3;
 		font-size: 0.8rem;
+		padding-left: 4px;
+		border-left: 1px solid #ccc;
 
 		.card_content {
 			.card_header {
@@ -146,10 +152,25 @@
 
 	.card_0 {
 		grid-row: span 5 / span 5;
+		padding-right: 4px;	
+		border-right: 1px solid #ccc;
 
 		.card_content {
+			.card_header{
+				height: 60%;
+
+				.card_description {
+					overflow: hidden;
+					display: -webkit-box;
+					line-clamp: 7;
+  					-webkit-line-clamp: 7;
+					-webkit-box-orient: vertical;
+					text-overflow: ellipsis;
+				}
+			}
+
 			.image_container {
-				display: flex;
+				height: 40%;
 
 				.card_image {
 					object-fit: contain;
@@ -160,9 +181,26 @@
 
 	.card_1 {
 		grid-row: span 5 / span 5;
+		padding-right: 4px;
+		border-right: 1px solid #ccc;
 
 		.card_content {
+			.card_header{
+				height: 59%;
+
+				.card_description {
+					overflow: hidden;
+					display: -webkit-box;
+					line-clamp: 7;
+  					-webkit-line-clamp: 7;
+					-webkit-box-orient: vertical;
+					text-overflow: ellipsis;
+				}
+			}
+			
 			.image_container {
+				height: 41%;
+
 				.card_image {
 					object-fit: contain;
 				}
@@ -186,9 +224,26 @@
 	.card_3 {
 		grid-row: span 5 / span 5;
 		grid-column-start: 5;
+		padding-left: 4px;
+		border-left: 1px solid #ccc;
 
 		.card_content {
+			.card_header{
+				height: 59%;
+
+				.card_description {
+					overflow: hidden;
+					display: -webkit-box;
+					line-clamp: 7;
+  					-webkit-line-clamp: 7;
+					-webkit-box-orient: vertical;
+					text-overflow: ellipsis;
+				}
+			}
+			
 			.image_container {
+				height: 41%;
+
 				.card_image {
 					object-fit: contain;
 				}
@@ -199,9 +254,26 @@
 	.card_4 {
 		grid-row: span 5 / span 5;
 		grid-column-start: 6;
+		padding-left: 4px;
+		border-left: 1px solid #ccc;
 
 		.card_content {
+			.card_header{
+				height: 60%;
+
+				.card_description {
+					overflow: hidden;
+					display: -webkit-box;
+					line-clamp: 7;
+  					-webkit-line-clamp: 7;
+					-webkit-box-orient: vertical;
+					text-overflow: ellipsis;
+				}
+			}
+			
 			.image_container {
+				height: 40%;
+
 				.card_image {
 					object-fit: contain;
 				}

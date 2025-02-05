@@ -21,7 +21,7 @@ export const NewsGrid = ({topic, id}) => {
 
 	return (
 		<div className={`news_container grid_${id}`}>
-			{data && data.slice(0, 6).map((article, i) => (
+			{data && data.slice(-6).map((article, i) => (
 				<NoticeCard 
 					key={article.contentLength} 
 					index={i}
