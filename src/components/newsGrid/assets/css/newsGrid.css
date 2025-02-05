@@ -1,9 +1,220 @@
 .news_container {
+	gap: 8px;
+	height: 500px;
+	width: 70%;
+	margin-bottom: 60px;
+}
+.grid_1,
+.grid_3 {
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
 	grid-template-rows: repeat(4, 1fr);
+
+	.card_0 {
+		grid-column: span 2 / span 2;
+		grid-row: span 2 / span 2;
+		border-bottom: 1px solid #ccc;
+
+		.card_content {
+
+			.card_header {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				height: 100%;
+			}
+
+			.card_description {
+				display: -webkit-box;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				line-clamp: 4;
+				-webkit-line-clamp: 4;
+				-webkit-box-orient: vertical;
+			}
+		}
+
+		.image_container {
+			display: none;
+		}
+	}
+
+	.card_1 {
+		grid-row: span 2 / span 2;
+		grid-column-start: 1;
+		grid-row-start: 3;
+		font-size: 0.8rem;
+		padding-right: 4px;
+		border-right: 1px solid #ccc;
+
+		.card_content {
+
+			.card_header {
+				margin-top: 5px;
+
+				.card_description {
+					display: none;
+				}
+			}
+		}
+	}
+
+	.card_2 {
+		grid-row: span 2 / span 2;
+		grid-column-start: 2;
+		grid-row-start: 3;
+		font-size: 0.8rem;
+
+		.card_content {
+			
+			.card_header {
+				margin-top: 5px;
+
+				.card_description {
+					display: none;
+				}
+			}
+		}
+	}
+
+	.card_3 {
+		grid-column: span 2 / span 2;
+		grid-row: span 4 / span 4;
+		grid-column-start: 3;
+		grid-row-start: 1;
+		padding-left: 4px;
+		border-left: 1px solid #ccc;
+
+		.card_content {
+			
+			.card_header {
+				height: 40%;
+
+				.card_description {
+					overflow: hidden;
+					text-overflow: ellipsis;
+					display: -webkit-box;
+					line-clamp: 4;
+					-webkit-line-clamp: 4;
+					-webkit-box-orient: vertical;
+				}
+			}
+
+			.image_container {
+				height: 60%;
+			}
+		}
+	}
+
+	.card_4 {
+		grid-row: span 2 / span 2;
+		grid-column-start: 5;
+		grid-row-start: 1;
+		font-size: 0.8rem;
+
+		.card_content {
+			
+			.card_header {
+				margin-top: 5px;
+
+				.card_description {
+					display: none;
+				}
+			}
+		}
+	}
+
+	.card_5 {
+		grid-row: span 2 / span 2;
+		grid-column-start: 5;
+		grid-row-start: 3;
+		font-size: 0.8rem;
+
+		.card_content {
+			
+			.card_header {
+				margin-top: 5px;
+
+				.card_description {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+.grid_2,
+.grid_4 {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: repeat(5, 1fr);
 	gap: 8px;
-   height: 500px;
-   width: 70%;
-   margin-bottom: 60px;
+
+	.card_0 {
+		grid-row: span 5 / span 5;
+      
+      .card_content{
+         .image_container{
+            display: flex;
+            
+            .card_image{
+               object-fit: contain;
+            }
+         }
+      }
+	}
+
+	.card_1 {
+		grid-row: span 5 / span 5;
+      
+      .card_content{
+         .image_container{
+            .card_image{
+               object-fit: contain;
+            }
+         }
+      }
+	}
+
+	.card_2 {
+		grid-column: span 2 / span 2;
+		grid-row: span 5 / span 5;
+      
+      .card_content{
+         .image_container{
+            .card_image{
+               object-fit: contain;
+            }
+         }
+      }
+	}
+
+	.card_3 {
+		grid-row: span 5 / span 5;
+		grid-column-start: 5;
+      
+      .card_content{
+         .image_container{
+            .card_image{
+               object-fit: contain;
+            }
+         }
+      }
+	}
+
+	.card_4 {
+		grid-row: span 5 / span 5;
+		grid-column-start: 6;
+      
+      .card_content{
+         .image_container{
+            .card_image{
+               object-fit: contain;
+            }
+         }
+      }
+	}
+	.card_5 {
+		display: none;
+	}
 }
