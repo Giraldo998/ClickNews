@@ -1,6 +1,6 @@
 import {useEffect} from 'react';
 import {useGetTrendingQuery} from '../../store/API/NewsApi';
-import {NoticeCard} from '../newsCards/NoticeCard';
+import { NoticeCard } from '../newsCards';
 import './assets/css/newsGrid.css';
 
 export const NewsGrid = ({topic, id}) => {

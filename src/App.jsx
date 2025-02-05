@@ -1,5 +1,4 @@
-import { Navbar } from "./components";
-import { NewsGrid } from "./components/newsGrid/NewsGrid";
+import { Navbar, NewsGrid } from "./components";
 
 export const App = () => {
 	
