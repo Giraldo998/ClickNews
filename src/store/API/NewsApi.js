@@ -1,15 +1,13 @@
 import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react';
+import { API_URL, API_KEY, API_HOST } from '../../assets';
 
 export const NewsApi = createApi({
 	reducerPath: 'NewsApi',
 	baseQuery: fetchBaseQuery({
-		baseUrl: 'https://news-api14.p.rapidapi.com',
+		baseUrl: `${API_URL}`,
 		prepareHeaders(headers) {
-			headers.set(
-				'x-rapidapi-key',
-				'86b6bb6691mshb69fe7689a60d3fp17ec55jsn2e796f515387'
-			);
-			headers.set('x-rapidapi-host', 'news-api14.p.rapidapi.com');
+			headers.set('x-rapidapi-key', `${API_KEY}`);
+			headers.set('x-rapidapi-host', `${API_HOST}`);
 			return headers;
 		},
 	}),
@@ -37,6 +35,7 @@ export const NewsApi = createApi({
 			},
 		}),
 	}),
+
 });
 
 export const {useSearchArticleQuery, useGetTrendingQuery} = NewsApi;
