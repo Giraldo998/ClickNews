@@ -1,18 +1,21 @@
+import { useState } from "react";
 import { Navbar, NewsGrid } from "./components";
+import { SearchedNews } from "./pages/SearchedNews";
 
 export const App = () => {
+	const [keyWord, setKeyWord] = useState('');
+
+	const searchNotice = (NewKKeyWord) => {
+		
+		setKeyWord(NewKKeyWord);
+	}
 	
 	return (
 		<>
-			{/* <header> */}
-			<Navbar/>
-			{/* banner */}
-			{/* </header> */}
+			<Navbar keyWordNotice={(event) => searchNotice(event)}/>
+				
 			<main style={{marginTop: '80px'}}>
-				<NewsGrid topic="economy" id='1' />
-				<NewsGrid topic="General" id='2' />
-				<NewsGrid topic="technology" id='3' />
-				<NewsGrid topic="culture" id='4' />
+				<SearchedNews keyWord={keyWord}/>
 			</main>
 			{}
 		</>
