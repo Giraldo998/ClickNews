@@ -13,8 +13,8 @@ export const App = () => {
 			<Navbar keyWordNotice={(event) => searchNotice(event)}/>
 				
 			<main style={{marginTop: '80px'}}>
-				{/* <SearchedNews keyWord={keyWord}/> */}
-				<DefaultNews />
+				<SearchedNews keyWord={keyWord}/>
+				{/* <DefaultNews /> */}
 			</main>
 			{}
 		</>

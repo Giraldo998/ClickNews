@@ -16,8 +16,6 @@ export const DefaultNews = () => {
       return (
          <>
             <NewsGrid topic={data} id="1" />
-            <NewsGrid topic={data} id='2'/>
-            <NewsGrid topic={data} id='3'/>
          </>
       );
    }
