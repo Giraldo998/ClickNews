@@ -1,14 +1,15 @@
-import React from 'react';
+import { NavLink, useNavigate } from 'react-router-dom';
+import { useForm } from '../hooks';
 import './assets/navbar.css';
-import {useForm} from '../hooks';
 
 export const Navbar = ({keyWordNotice}) => {
 	const {keyWord, onInputChange} = useForm();
+	const navigate = useNavigate();
 
 	const onsSubmit = (e) => {
 		e.preventDefault();
-
 		keyWordNotice(keyWord);
+		navigate('/search');
 	};
 
 	return (
@@ -35,9 +36,9 @@ export const Navbar = ({keyWordNotice}) => {
 				</div>
 
 				<div className="logo container">
-					<a href="#">
+					<NavLink to={'/'}>
 						<img src="src\assets\img\ClickNews_Logo.svg" alt="" />
-					</a>
+					</NavLink>
 				</div>
 
 				<div className="search container">
@@ -49,7 +50,9 @@ export const Navbar = ({keyWordNotice}) => {
 							value={keyWord}
 							onChange={onInputChange}
 						/>
-						<button type="submit">buscar</button>
+						<button type="submit">
+							Buscar
+						</button>
 					</form>
 				</div>
 			</div>
