@@ -1,23 +1,14 @@
-import {useEffect} from 'react';
-import {NewsGrid} from '../components';
-import {useSearchArticleQuery} from '../store/API/NewsApi';
+import {SearchedSection} from '../components';
 
 export const SearchedNews = ({keyWord}) => {
+
+	// console.log(keyWord);
 	
-	const {data, error, isLoading} = useSearchArticleQuery({query: keyWord, language: 'es'});
-
-	useEffect(() => {
-		if (error) console.error('Error:', error);
-	}, [error]);
-
-	if (isLoading) console.log('Loading...');
-
-	if (data) {
-		return (
-			<>
-				<NewsGrid topic={data} id="1" />
-			</>
-		);
-	}
-	return null;
+	
+	return (
+		<>
+			<SearchedSection keyWord={keyWord} id="1" />
+			<SearchedSection keyWord={keyWord} id="2" />
+		</>
+	);
 };
