@@ -12,25 +12,30 @@ export const Navbar = ({keyWordNotice}) => {
 		navigate('/search');
 	};
 
+	const navigateToNotice = (topic) => {
+		keyWordNotice(topic);
+		navigate(`sugested/${topic}`);
+	};
+
 	return (
 		<nav className="navbar_container">
 			<div className="nav_content">
 				<div className="navigation container">
-					<ul style={{display: 'none'}}>
+					<ul style={{cursor: 'pointer'}}>
 						<li>
-							<a href="#">Home</a>
+							<h5 onClick={() => navigateToNotice('sports')}>Deportes</h5>
 						</li>
 						<li>
-							<a href="#">About</a>
+							<h5 onClick={() => navigateToNotice('science')}>ciencia</h5>
 						</li>
 						<li>
-							<a href="#">Services</a>
+							<h5 onClick={() => navigateToNotice('culture')}>Cultura</h5>
 						</li>
 						<li>
-							<a href="#">log</a>
+							<h5 onClick={() => navigateToNotice('Religion')}>Religion</h5>
 						</li>
 						<li>
-							<a href="#">Contact</a>
+							<h5 onClick={() => navigateToNotice('Tv')}>Farandula</h5>
 						</li>
 					</ul>
 				</div>

@@ -1,2 +1,3 @@
-export * from './DefaultNews'
-export * from './SearchedNews'
+export * from './DefaultNewsPage'
+export * from './SearchedNewsPage'
+export * from './SugestedNewsPage'

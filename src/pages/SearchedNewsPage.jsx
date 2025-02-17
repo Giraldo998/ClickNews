@@ -1,10 +1,7 @@
 import {SearchedSection} from '../components';
 
-export const SearchedNews = ({keyWord}) => {
+export const SearchedNewsPage = ({keyWord}) => {
 
-	// console.log(keyWord);
-	
-	
 	return (
 		<>
 			<SearchedSection keyWord={keyWord} id="1" />

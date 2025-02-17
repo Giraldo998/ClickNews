@@ -1,6 +1,6 @@
 import { DefaultSection } from "../components";
 
-export const DefaultNews = () => {
+export const DefaultNewsPage = () => {
    return (
       <>
          <DefaultSection topic="general" id='1'/>

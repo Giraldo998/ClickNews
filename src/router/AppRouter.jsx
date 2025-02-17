@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router';
 import { useState } from 'react';
 import { Navbar } from '../components';
-import { DefaultNews, SearchedNews } from '../pages';
+import { DefaultNewsPage, SearchedNewsPage, SugestedNewsPage } from '../pages';
 
 export const AppRouter = () => {
 	
@@ -14,8 +14,9 @@ export const AppRouter = () => {
 			<Navbar keyWordNotice={(event) => searchNotice(event)}/>
 			<div className='main'>
 				<Routes>
-					<Route path="/" element={<DefaultNews/>} />
-					<Route path="/search" element={<SearchedNews keyWord={keyWord}/>} />
+					<Route path="/" element={<DefaultNewsPage/>} />
+					<Route path="/sugested/:topic" element={<SugestedNewsPage suggestion={keyWord}/>} />
+					<Route path="/search" element={<SearchedNewsPage keyWord={keyWord}/>} />
 				</Routes>
 			</div>
 		</>

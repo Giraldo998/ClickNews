@@ -8,7 +8,7 @@ export const DefaultSection = ({topic, id}) => {
    
    useEffect(() => {
       if (error) console.error('Error:', error);
-   }, [error, data]);
+   }, [error]);
 
    if (isLoading) console.log('Loading...');
 
