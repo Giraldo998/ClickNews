@@ -1,12 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { NewsApi } from './API/NewsApi';
+import { newsApi } from './API/newsApi';
 
 export const store = configureStore({
   reducer: {
-    [NewsApi.reducerPath]: NewsApi.reducer,
+    [newsApi.reducerPath]: newsApi.reducer,
   },
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(NewsApi.middleware),
+    getDefaultMiddleware().concat(newsApi.middleware),
 });
 
 

@@ -1,13 +1,13 @@
 import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react';
-import { API_URL, API_KEY, API_HOST } from '../../assets';
+import { API_URL, API_KEY, API_HOST, NAME_KEY, NAME_HOST } from '../../assets';
 
-export const NewsApi = createApi({
+export const newsApi = createApi({
 	reducerPath: 'NewsApi',
 	baseQuery: fetchBaseQuery({
 		baseUrl: `${API_URL}`,
 		prepareHeaders(headers) {
-			headers.set('x-rapidapi-key', `${API_KEY}`);
-			headers.set('x-rapidapi-host', `${API_HOST}`);
+			headers.set(`${NAME_KEY}`, `${API_KEY}`);
+			headers.set(`${NAME_HOST}`, `${API_HOST}`);
 			return headers;
 		},
 	}),
@@ -38,4 +38,4 @@ export const NewsApi = createApi({
 
 });
 
-export const {useSearchArticleQuery, useGetTrendingQuery} = NewsApi;
+export const {useSearchArticleQuery, useGetTrendingQuery} = newsApi;
