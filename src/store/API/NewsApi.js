@@ -1,13 +1,13 @@
 import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react';
-import { API_URL, API_KEY, API_HOST, NAME_KEY, NAME_HOST } from '../../assets';
+import { API_URL, API_KEY, API_HOST, KEY_NAME, HOST_NAME } from '../../assets';
 
 export const newsApi = createApi({
 	reducerPath: 'NewsApi',
 	baseQuery: fetchBaseQuery({
 		baseUrl: `${API_URL}`,
 		prepareHeaders(headers) {
-			headers.set(`${NAME_KEY}`, `${API_KEY}`);
-			headers.set(`${NAME_HOST}`, `${API_HOST}`);
+			headers.set(`${KEY_NAME}`, `${API_KEY}`);
+			headers.set(`${HOST_NAME}`, `${API_HOST}`);
 			return headers;
 		},
 	}),
