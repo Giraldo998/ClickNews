@@ -15,7 +15,7 @@ export const SearchedSection = ({keyWord, id}) => {
 	if (data) {
 	   return (
 	      <>
-	         <NewsGrid topic={data} id={id} />
+	         <NewsGrid topic={data} id={id} amountNews={0}/>
 	      </>
 	   );
 	}
