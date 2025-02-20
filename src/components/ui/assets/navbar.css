@@ -27,28 +27,72 @@
 		.navigation {
 			ul {
 				display: flex;
+				align-items: center;
+				height: 100%;
 				gap: 10px;
 				list-style: none;
 
-				navLink{
-					text-decoration: none;
-					color: #333;
-					font-weight: 400;
-					font-size: 1.2rem;
+				li{
+					display: flex;
+					align-items: center;
+					height: 80%;
+					cursor: pointer;
 				}
 			}
 		}
 
 		.logo {
-			a{
+			a {
 				height: 100%;
 				width: 100%;
 				text-align: center;
-				
+
 				img {
 					width: 40%;
 					height: 100%;
 					object-fit: fill;
+				}
+			}
+		}
+
+		.search {
+			.form {
+				display: flex;
+				height: 100%;
+				justify-content: flex-end;
+				align-items: center;
+				width: 70%;
+
+				input {
+					width: 70%;
+					height: 50%;
+					padding: 10px;
+					border: none;
+					border-radius: 5px;
+					outline: none;
+					transition: all 0.5s ease-in-out;
+				}
+
+				input:focus{
+					width: 50%;
+				}
+
+				input:focus::placeholder {
+					color: #fff;
+					transition: color 0.5s ease-in-out;
+				}
+				
+				button {
+					height: 50%;
+					width: 20%;
+					border: none;
+					margin-left: 10px;
+					border-radius: 5px;
+					outline: none;
+					background-color: #333;
+					color: #fff;
+					font-weight: 400;
+					cursor: pointer;
 				}
 			}
 		}
