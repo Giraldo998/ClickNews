@@ -3,13 +3,14 @@ import { useForm } from '../hooks';
 import './assets/navbar.css';
 
 export const Navbar = ({keyWordNotice}) => {
-	const {keyWord, onInputChange} = useForm();
+	const {keyWord, onInputChange, onResetForm} = useForm();
 	const navigate = useNavigate();
 
-	const onsSubmit = (e) => {
-		e.preventDefault();
+	const onsSubmit = (event) => {
+		event.preventDefault();
 		keyWordNotice(keyWord);
-		navigate('/search');
+		navigate(`/search/${keyWord}`);
+		onResetForm(event);
 	};
 
 	const navigateToNotice = (topic) => {
@@ -21,7 +22,7 @@ export const Navbar = ({keyWordNotice}) => {
 		<nav className="navbar_container">
 			<div className="nav_content">
 				<div className="navigation container">
-					<ul style={{cursor: 'pointer'}}>
+					<ul>
 						<li>
 							<h5 onClick={() => navigateToNotice('sports')}>Deportes</h5>
 						</li>
@@ -47,11 +48,12 @@ export const Navbar = ({keyWordNotice}) => {
 				</div>
 
 				<div className="search container">
-					<form action="submit" onSubmit={onsSubmit}>
+					<form action="submit" onSubmit={onsSubmit} className='form'>
 						<input
 							type="text"
-							placeholder="Search"
+							placeholder="Busca por un tema, ej: Colombia"
 							name="keyWord"
+							autoComplete='off'
 							value={keyWord}
 							onChange={onInputChange}
 						/>

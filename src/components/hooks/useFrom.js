@@ -12,8 +12,9 @@ export const useForm = ( initialForm = {} ) => {
 		});
 	};
    
-   const onResetForm = ()=>{
+   const onResetForm = (event)=>{
       setFormState(initialForm)
+      event.target[0].value = '';
    }
 
    return {
