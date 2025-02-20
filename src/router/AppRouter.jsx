@@ -16,7 +16,7 @@ export const AppRouter = () => {
 				<Routes>
 					<Route path="/" element={<DefaultNewsPage/>} />
 					<Route path="/sugested/:topic" element={<SugestedNewsPage suggestion={keyWord}/>} />
-					<Route path="/search" element={<SearchedNewsPage keyWord={keyWord}/>} />
+					<Route path="/search/:keyWord" element={<SearchedNewsPage keyWord={keyWord}/>} />
 				</Routes>
 			</div>
 		</>
