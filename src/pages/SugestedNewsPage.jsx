@@ -4,7 +4,7 @@ export const SugestedNewsPage = ({suggestion}) => {
    
 	return (
 		<>
-			<DefaultSection topic={suggestion} id="1" />
+			<DefaultSection topic={suggestion} id="2" amountNews={0} />
 		</>
 	);
 };

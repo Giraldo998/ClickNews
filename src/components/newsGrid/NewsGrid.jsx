@@ -1,7 +1,7 @@
 import { NoticeCard } from '../newsCards';
 import './assets/css/newsGrid.css';
 
-export const NewsGrid = ({topic, id, amountNews=-6}) => {
+export const NewsGrid = ({topic, id, amountNews}) => {
 
 	
 	return (
