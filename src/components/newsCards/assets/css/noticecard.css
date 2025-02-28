@@ -10,7 +10,7 @@
 
    .card_content{
       display: flex;
-		flex-direction: column-reverse;
+		flex-direction: column;
       line-height: 1.2em;
       width: 100%;
       height: 100%;
@@ -20,20 +20,28 @@
       .card_header{
          margin: 5px 0;
          width: 100%;
-         height: 45%;
-      }
-
-      .image_container {
-         width: 100%;
          height: 55%;
-         overflow: hidden;
-   
-         .card_image {
+         
+         .image_container {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            overflow: hidden;
+      
+            .card_image {
+               width: 100%;
+               height: 100%;
+               object-fit: cover;
+            }
          }
       }
+
+      .description_container{
+         height: 45%;
+
+         span{
+            color: steelblue;
+         }
+      }
+
    }
 
 
