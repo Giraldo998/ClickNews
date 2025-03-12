@@ -3,7 +3,7 @@ import { useGetTrendingQuery } from "../../store/API/newsApi";
 import { NewsGrid } from "../newsGrid";
 
 
-export const DefaultSection = ({topic, id, amountNews = -6}) => {
+export const DefaultSection = ({topic, id, amountNews}) => {
    const [articles, setArticles] = useState([]);
 
    const {data, isLoading, error} = useGetTrendingQuery({topic: topic, language: 'es'});
