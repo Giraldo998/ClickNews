@@ -1,12 +1,12 @@
 import { NoticeCard } from '../newsCards';
 import './assets/css/newsGrid.css';
 
-export const NewsGrid = ({topic, id, amountNews}) => {
+export const NewsGrid = ({topic, id}) => {
 
 	
 	return (
 		<div className={`news_container grid_${id}`}>
-			{topic && topic.slice(amountNews).map((article, i) => (
+			{topic && topic.map((article, i) => (
 				<NoticeCard 
 					key={article.contentLength} 
 					index={i}

@@ -20,10 +20,7 @@ export const NoticeCard = ({
 				</header>
 				<div className="description_container">
 					<p className='card_description'>{description}</p>
-					{(authors!='')
-						? <p>Autor: <span>{authors}</span></p>
-						: <p>Autor: <span>Anónimo</span></p>
-					}
+					<p className='author'>{authors ? (<> Autor: <span>{authors}</span> </>) : null}</p>
 					</div>
 			</a>
 		</article>

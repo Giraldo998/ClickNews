@@ -3,7 +3,7 @@ import { useGetTrendingQuery } from "../../store/API/newsApi";
 import { NewsGrid } from "../newsGrid";
 
 
-export const DefaultSection = ({topic, id, amountNews = -6}) => {
+export const DefaultSection = ({topic, id}) => {
    const [articles, setArticles] = useState([]);
 
    const {data, isLoading, error} = useGetTrendingQuery({topic: topic, language: 'es'});
@@ -21,7 +21,7 @@ export const DefaultSection = ({topic, id, amountNews = -6}) => {
    if (data) {
       return (
          <>
-            <NewsGrid topic={articles} id={id} amountNews={amountNews}/>
+            <NewsGrid topic={articles} id={id}/>
          </>
       );
    }
