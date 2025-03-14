@@ -27,16 +27,16 @@ export const Navbar = ({keyWordNotice}) => {
 							<h5 onClick={() => navigateToNotice('sports')}>Deportes</h5>
 						</li>
 						<li>
-							<h5 onClick={() => navigateToNotice('science')}>ciencia</h5>
+							<h5 onClick={() => navigateToNotice('science')}>Ciencia</h5>
 						</li>
 						<li>
 							<h5 onClick={() => navigateToNotice('culture')}>Cultura</h5>
 						</li>
 						<li>
-							<h5 onClick={() => navigateToNotice('Religion')}>Religion</h5>
+							<h5 onClick={() => navigateToNotice('Religion')}>Religión</h5>
 						</li>
 						<li>
-							<h5 onClick={() => navigateToNotice('Tv')}>Farandula</h5>
+							<h5 onClick={() => navigateToNotice('Tv')}>Farándula</h5>
 						</li>
 					</ul>
 				</div>
