@@ -1,4 +1,4 @@
-import './assets/css/noticecard.css';
+import './assets/css/notice_card.css';
 
 export const NoticeCard = ({
 	index,
@@ -20,7 +20,7 @@ export const NoticeCard = ({
 				</header>
 				<div className="description_container">
 					<p className='card_description'>{description}</p>
-					<p className='author'>{authors ? (<> Autor: <span>{authors}</span> </>) : null}</p>
+					<p className='author'>{authors!=0 ? <> Por: <span>{authors}</span> </> : null}</p>
 					</div>
 			</a>
 		</article>
