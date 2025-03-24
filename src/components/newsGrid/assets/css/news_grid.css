@@ -37,6 +37,7 @@
 
 			.card_title {
 				height: 100%;
+				width: 100%;
 			}
 		}
 
@@ -409,5 +410,73 @@
 	}
 	.card_9 {
 		grid-column: 10 / span 4;
+	}
+}
+
+.grid_2{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	width: 83%;
+	border-bottom: none;
+	
+	[class^="card_"]{
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: flex-end;
+		max-height: 194px;
+		max-width: 900px;
+		overflow: hidden;
+		border-bottom: 1px solid #c0c0c0;
+		
+		.card_content{
+			position: relative;
+			border-bottom: none;
+			
+			.card_header{
+				height: 100%;
+				width: 30%;
+				
+				.image_container{
+					width: 100%;
+					height: 100%;
+				}
+			}
+			
+			.card_title{
+				position: absolute;
+				top: 0;
+				left: 10%;
+				width: 60%;
+				height: auto;
+				max-height: 76px;
+				overflow: hidden;
+				border-bottom: none;
+				
+			}
+			
+			
+			.description_container{
+				width: 60%;
+				height: auto;
+				padding-top: 9%;
+				
+				.card_description {
+					align-content: flex-end;
+					display: -webkit-box;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					line-clamp: 4;
+					-webkit-line-clamp: 4;
+					-webkit-box-orient: vertical;
+					border-bottom: none;
+				}
+			}
+			.card_footer{
+				width: 10%;
+				display: block;
+				border-bottom: none;
+			}
+		}
 	}
 }

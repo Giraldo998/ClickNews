@@ -53,6 +53,10 @@
          }
       }
 
+      .card_footer{
+         display: none;
+      }
+
    }
 
 
