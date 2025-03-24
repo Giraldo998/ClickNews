@@ -7,10 +7,16 @@ export const NoticeCard = ({
 	thumbnail: image,
 	url,
 	authors,
+	date
 }) => {
 
+	date = new Date(date).toLocaleDateString('es-ES', {
+		month: 'short',
+		day: 'numeric',
+	});
+
 	return (
-		<article className={`card_container card_${index} card`}>
+		<article className={`card_${index} card_container card`}>
 			<a href={url} target='_blank' className="card_content">
 				<header className='card_header'>
 					<div className="image_container">
@@ -21,7 +27,10 @@ export const NoticeCard = ({
 				<div className="description_container">
 					<p className='card_description'>{description}</p>
 					<p className='author'>{authors!=0 ? <> Por: <span>{authors}</span> </> : null}</p>
-					</div>
+				</div>
+				<footer className='card_footer'>
+					<p className='date'>{date}</p>
+				</footer>
 			</a>
 		</article>
 	);
