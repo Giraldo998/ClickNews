@@ -12,6 +12,7 @@ export const newsApi = createApi({
 		},
 	}),
 
+	keepUnusedDataFor: 600,
 	endpoints: (builder) => ({
 		searchArticle: builder.query({
 			query: ({query, language}) => ({
@@ -29,6 +30,7 @@ export const newsApi = createApi({
 				url: '/v2/trendings',
 				params: {topic, language},
 			}),
+			extraOptions: { maxRetries: 2 },
 			transformResponse: (response) => {
 				const { data } = response;
 				return data;

@@ -4,24 +4,28 @@ import { NewsGrid } from "../newsGrid";
 
 
 export const DefaultSection = ({topic, id}) => {
-   const [articles, setArticles] = useState([]);
 
-   const {data, isLoading, error} = useGetTrendingQuery({topic: topic, language: 'es'});
+   const [enanbleQuery, setEnableQuery] = useState(false);
    
    useEffect(() => {
-      if (error) console.error('Error:', error);
-      
-      setArticles([]);
+      const delays = { '1': 0, '3': 1000, '4': 2000 };
+      const timer = setTimeout(() => {
+         setEnableQuery(true);
+       }, delays[id]);
+       
+       return () => clearTimeout(timer);
 
-      if (data) setArticles(data);
-   }, [error, data]);
-
+   }, [id]);
+  
+   const {data, isLoading, error} = useGetTrendingQuery({topic: topic, language: 'es'}, {skip: !enanbleQuery});
+   
    if (isLoading) console.log('Loading...');
+   if (error) console.error('Error:', error);
    
    if (data) {
       return (
          <>
-            <NewsGrid topic={articles} id={id}/>
+            <NewsGrid topic={data} id={id}/>
          </>
       );
    }
