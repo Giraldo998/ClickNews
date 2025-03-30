@@ -1,9 +1,12 @@
-import { NavLink, useNavigate } from 'react-router-dom';
-import { useForm } from '../hooks';
+import {NavLink, useNavigate} from 'react-router-dom';
+import {showNavbar, useForm} from '../hooks';
+import {HamburgerMenu, NavigationMenu} from './components';
 import './assets/navbar.css';
 
 export const Navbar = ({keyWordNotice}) => {
+	
 	const {keyWord, onInputChange, onResetForm} = useForm();
+	const {isActive, activeNavbar} = showNavbar();
 	const navigate = useNavigate();
 
 	const onsSubmit = (event) => {
@@ -21,45 +24,34 @@ export const Navbar = ({keyWordNotice}) => {
 	return (
 		<nav className="navbar_container">
 			<div className="nav_content">
-				<div className="navigation container">
-					<ul>
-						<li>
-							<h5 onClick={() => navigateToNotice('sports')}>Deportes</h5>
-						</li>
-						<li>
-							<h5 onClick={() => navigateToNotice('science')}>Ciencia</h5>
-						</li>
-						<li>
-							<h5 onClick={() => navigateToNotice('culture')}>Cultura</h5>
-						</li>
-						<li>
-							<h5 onClick={() => navigateToNotice('Religion')}>Religión</h5>
-						</li>
-						<li>
-							<h5 onClick={() => navigateToNotice('Tv')}>Farándula</h5>
-						</li>
-					</ul>
+				<div className="buttonMobileMenu">
+					<HamburgerMenu activateNavbar={activeNavbar}/>
+				</div>
+
+				<div className={`navigation ${isActive ? 'active' : ''}`}>
+					<NavigationMenu catchTopic={(event) => navigateToNotice(event)}/>
 				</div>
 
 				<div className="logo container">
 					<NavLink to={'/'}>
-						<img src="src\assets\img\ClickNews_Logo.svg" alt="" />
+						<img
+							src="src\assets\img\ClickNews_Logo.svg"
+							alt="ClickNews_logo"
+						/>
 					</NavLink>
 				</div>
 
-				<div className="search container">
-					<form action="submit" onSubmit={onsSubmit} className='form'>
+				<div className={`search_container ${isActive ? 'active' : ''}`}>
+					<form action="submit" onSubmit={onsSubmit} className="form">
 						<input
 							type="text"
 							placeholder="Busca por un tema, ej: Colombia"
 							name="keyWord"
-							autoComplete='off'
+							autoComplete="off"
 							value={keyWord}
 							onChange={onInputChange}
 						/>
-						<button type="submit">
-							Buscar
-						</button>
+						<button type="submit">Buscar</button>
 					</form>
 				</div>
 			</div>
