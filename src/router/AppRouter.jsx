@@ -5,9 +5,9 @@ import { DefaultNewsPage, SearchedNewsPage, SugestedNewsPage } from '../pages';
 
 export const AppRouter = () => {
 	
-   const [keyWord, setKeyWord] = useState('');
+   const [keyword, setKeyword] = useState('');
 
-	const searchNotice = (NewKKeyWord) => setKeyWord(NewKKeyWord);
+	const searchNotice = (newKeyword) => setKeyword(newKeyword);
 	
 	return (
 		<>
@@ -15,8 +15,8 @@ export const AppRouter = () => {
 			<div className='main'>
 				<Routes>
 					<Route path="/" element={<DefaultNewsPage/>} />
-					<Route path="/sugested/:topic" element={<SugestedNewsPage suggestion={keyWord}/>} />
-					<Route path="/search/:keyWord" element={<SearchedNewsPage keyWord={keyWord}/>} />
+					<Route path="/sugested/:topic" element={<SugestedNewsPage suggestion={keyword}/>} />
+					<Route path="/search/:keyword" element={<SearchedNewsPage keyWord={keyword}/>} />
 				</Routes>
 			</div>
 		</>
