@@ -1,4 +1,4 @@
-import './assets/css/noticeCard.css';
+import './assets/css/noticecard.css';
 
 export const NoticeCard = ({
 	index,
