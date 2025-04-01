@@ -1,5 +1,6 @@
 import { NoticeCard } from '../newsCards';
-import './assets/css/news_grid.css';
+import './assets/css/newsGrid.css';
+import './assets/css/newsGridMobile.css';
 
 export const NewsGrid = ({topic, id}) => {
 

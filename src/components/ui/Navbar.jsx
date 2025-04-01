@@ -2,6 +2,7 @@ import {NavLink, useNavigate} from 'react-router-dom';
 import {showNavbar, useForm} from '../hooks';
 import {HamburgerMenu, NavigationMenu} from './components';
 import './assets/navbar.css';
+import './assets/navbarMobile.css';
 
 export const Navbar = ({keyWordNotice}) => {
 	

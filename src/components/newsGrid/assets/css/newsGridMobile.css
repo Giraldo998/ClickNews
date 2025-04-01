@@ -1,0 +1,57 @@
+
+@media (max-width: 768px) {
+	.grid{
+		display: flex;
+		flex-direction: column;
+
+		.card{
+			border: none;
+			padding-inline: 0;
+		}
+		
+		.card_0, .card_1, .card_2, .card_4, .card_5, .card_6, .card_7, .card_8{
+			border-bottom: 1px solid #ccc;
+			
+		}
+	}
+
+	.grid_2 {
+		.card{
+			min-height: 130px;
+			.card_content {
+				.card_header{
+					width: 34%;
+
+					.image_container{
+						height: 77%;
+					}
+					
+					.card_title{
+						left: 0;
+						width: 70%;
+					}
+				}
+				.description_container{
+					width: 70%;
+					padding-top: 26%;
+
+					.author{
+						height: 18px;
+					}
+				}
+				.card_footer {
+					display: none;
+				}
+			}
+		}
+  	}
+	
+	.grid_4 {
+		.card_1, & .card_2 {
+			 .card_content {
+				  height: 166px;
+			 }
+		}
+  	}
+
+}

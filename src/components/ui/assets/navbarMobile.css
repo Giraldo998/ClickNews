@@ -1,0 +1,51 @@
+
+@media (max-width: 768px) {
+	.navbar_container{
+		padding-inline: 29px;
+
+			.nav_content{
+				.buttonMobileMenu {
+					display: block;
+				}
+			}
+
+			.navigation {
+				position: absolute;
+				display: none;
+				top: 60px;
+				left: 0;
+		
+				ul {
+					justify-content: center;
+					height: 100%;
+					width: 100%;
+					gap: 20px;
+				}
+			}
+		
+			.navigation.active {
+				display: flex;
+			}
+
+			.logo{
+				padding-right: 20px;
+			}
+
+			.search_container {
+				position: absolute;
+				display: none;
+				justify-content: center;
+				top: 110px;
+				left: 0;
+
+				.form{
+					width: 90%;
+					padding-right: 20px;
+				}
+			}
+
+			.search_container.active {
+				display: flex;
+			}
+		}
+	}
