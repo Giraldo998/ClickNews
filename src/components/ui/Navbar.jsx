@@ -36,7 +36,7 @@ export const Navbar = ({keyWordNotice}) => {
 				<div className="logo container">
 					<NavLink to={'/'}>
 						<img
-							src="public\img\ClickNews_Logo.svg"
+							src="/img/ClickNews_Logo.svg"
 							alt="ClickNews_logo"
 						/>
 					</NavLink>
