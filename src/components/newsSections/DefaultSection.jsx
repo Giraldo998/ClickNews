@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useGetTrendingQuery } from "../../store/API/newsApi";
+import { useGetTrendingQuery } from "../../store/API/NewsApi";
 import { NewsGrid } from "../newsGrid";
 
 

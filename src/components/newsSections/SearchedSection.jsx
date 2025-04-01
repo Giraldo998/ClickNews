@@ -1,5 +1,5 @@
 import {useEffect} from 'react';
-import { useSearchArticleQuery} from '../../store/API/newsApi';
+import { useSearchArticleQuery} from '../../store/API/NewsApi';
 import { NewsGrid } from '../newsGrid';
 
 export const SearchedSection = ({keyWord, id}) => {
