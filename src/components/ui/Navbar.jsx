@@ -1,5 +1,5 @@
 import {NavLink, useNavigate} from 'react-router-dom';
-import {showNavbar, useForm} from '../hooks';
+import {useForm, useShowNavbar} from '../hooks';
 import {HamburgerMenu, NavigationMenu} from './components';
 import './assets/navbar.css';
 import './assets/navbarMobile.css';
@@ -7,7 +7,7 @@ import './assets/navbarMobile.css';
 export const Navbar = ({keyWordNotice}) => {
 	
 	const {keyWord, onInputChange, onResetForm} = useForm();
-	const {isActive, activeNavbar} = showNavbar();
+	const {isActive, activeNavbar, isChecked} = useShowNavbar();
 	const navigate = useNavigate();
 
 	const onsSubmit = (event) => {
@@ -26,7 +26,7 @@ export const Navbar = ({keyWordNotice}) => {
 		<nav className="navbar_container">
 			<div className="nav_content">
 				<div className="buttonMobileMenu">
-					<HamburgerMenu activateNavbar={activeNavbar}/>
+					<HamburgerMenu activateNavbar={activeNavbar} checkStatus={isChecked}/>
 				</div>
 
 				<div className={`navigation ${isActive ? 'active' : ''}`}>
