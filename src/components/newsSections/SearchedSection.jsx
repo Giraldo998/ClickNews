@@ -1,16 +1,16 @@
-import {useEffect} from 'react';
 import { useSearchArticleQuery} from '../../store/API/NewsApi';
 import { NewsGrid } from '../newsGrid';
+import { ErrorPage } from '../../pages';
 
 export const SearchedSection = ({keyWord, id}) => {
 	const {data, isLoading, error} = useSearchArticleQuery({query: keyWord,	language: 'es'});
 		
-	useEffect(() => {
-		if (error) console.error('Error:', error);
-      
-	}, [error, data]);
-
 	if (isLoading) console.log('Loading...');
+
+	if (error) {
+		console.log(error);
+		return <ErrorPage typeError={error}/>
+	}
 
 	if (data) {
 	   return (
@@ -19,5 +19,4 @@ export const SearchedSection = ({keyWord, id}) => {
 	      </>
 	   );
 	}
-	return null;
 };

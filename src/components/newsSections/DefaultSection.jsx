@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useGetTrendingQuery } from "../../store/API/NewsApi";
 import { NewsGrid } from "../newsGrid";
+import { ErrorPage } from "../../pages";
 
 
 export const DefaultSection = ({topic, id}) => {
@@ -20,7 +21,11 @@ export const DefaultSection = ({topic, id}) => {
    const {data, isLoading, error} = useGetTrendingQuery({topic: topic, language: 'es'}, {skip: !enanbleQuery});
    
    if (isLoading) console.log('Loading...');
-   if (error) console.error('Error:', error);
+   
+   if (error) {
+		console.log(error);
+		return <ErrorPage typeError={error}/>
+	}
    
    if (data) {
       return (

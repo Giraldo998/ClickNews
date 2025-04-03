@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 export const useShowNavbar = () => {
 
    const [isActive, setIsActive] = useState(false)
-   const [isChecked, setIsChecked] = useState(true)
+   const [isChecked, setIsChecked] = useState(false)
 
    const activeNavbar = () => {
       setIsActive(!isActive)
